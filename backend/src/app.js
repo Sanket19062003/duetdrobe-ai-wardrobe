@@ -12,8 +12,12 @@ const app = express();
 //Enable CORS for all routes
 app.use(cors());
 app.use(express.json());
+
 const authRoutes = require('./routes/auth');
 app.use('/api/auth', authRoutes);
+
+const wardrobeRoutes = require('./routes/wardrobe');
+app.use('/api/wardrobe',wardrobeRoutes);
 
 //Health check endpoint
 app.get('/api/health', (req, res) => {
