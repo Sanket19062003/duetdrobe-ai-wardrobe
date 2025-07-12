@@ -19,6 +19,9 @@ app.use('/api/auth', authRoutes);
 const wardrobeRoutes = require('./routes/wardrobe');
 app.use('/api/wardrobe',wardrobeRoutes);
 
+const outfitRoutes = require('./routes/outfits');
+app.use('/api/outfits',outfitRoutes);
+
 //Health check endpoint
 app.get('/api/health', (req, res) => {
     res.json({status: 'ok', message: 'Wardrobe AI backend is running'});
